@@ -35,6 +35,9 @@ securely licensed, and always up to date.
 - **PHP:** 7.4 or later
 - **WordPress:** 6.4.3 or later
 
+**Important: The [Lemon Squeezy - Better Endpoints](https://github.com/arraypress/lemon-squeezy-better-endpoints)
+plugin must be installed and active on your website to use this library.**
+
 ## Installation
 
 To integrate the library into your WordPress plugin, use Composer:
@@ -67,8 +70,8 @@ $updater = new Updater(
 	'https://example.com/my-plugin-page' // Optional. Expiration Renewal URL
 );
 
-if ( $updater->is_license_activated() ) {
- // Disable functionality in your plugin
+if ( ! $updater->is_license_activated() ) {
+ // Disable functionality in your plugin if not active
 }
 ```
 
