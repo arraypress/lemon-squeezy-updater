@@ -8,6 +8,12 @@ legitimacy
 before activation. Additionally, it supports an optional renewal URL feature, guiding users to repurchase when licenses
 expire.
 
+![Alt text](/assets/test-image.jpg "Optional title")
+
+```bash
+Important: This library requires the Lemon Squeezy - Better Endpoints plugin installed on your website to work.
+```
+
 **Key Features:**
 
 - **License Activation and Validation:** Simplifies the process of activating and validating license keys, ensuring that
@@ -69,6 +75,10 @@ $updater = new Updater(
 	'variation_id', // Optional. Your Lemon Squeezy Product Variation ID (12345)
 	'https://example.com/my-plugin-page' // Optional. Renewal URL
 );
+
+if ( $updater->is_license_activated() ) {
+ // 
+}
 ```
 
 ## Contributions
