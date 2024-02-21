@@ -8,11 +8,7 @@ legitimacy
 before activation. Additionally, it supports an optional renewal URL feature, guiding users to repurchase when licenses
 expire.
 
-![Alt text](/assets/test-image.jpg "Optional title")
-
-```bash
-Important: This library requires the Lemon Squeezy - Better Endpoints plugin installed on your website to work.
-```
+![Alt text](/assets/preview.webp "Preview Video")
 
 **Key Features:**
 
@@ -55,11 +51,6 @@ Include the Composer autoloader in your plugin to access the library functionali
 require_once __DIR__ . '/vendor/autoload.php';
 ```
 
-## Adding Licensing Management and Updater to Your WordPress Plugin
-
-With just one line of code, add a licensing capabilities to your plugin's row in the WordPress plugins list, enabling
-key management features like activation and deactivation directly from the admin interface.
-
 ### Example Integration
 
 ```php
@@ -73,11 +64,11 @@ $updater = new Updater(
 	'store_id', // Optional but recommended. Your Lemon Squeezy Store ID (12345)
 	'product_id', // Optional but recommended. Your Lemon Squeezy Product ID (12345)
 	'variation_id', // Optional. Your Lemon Squeezy Product Variation ID (12345)
-	'https://example.com/my-plugin-page' // Optional. Renewal URL
+	'https://example.com/my-plugin-page' // Optional. Expiration Renewal URL
 );
 
 if ( $updater->is_license_activated() ) {
- // 
+ // Disable functionality in your plugin
 }
 ```
 
