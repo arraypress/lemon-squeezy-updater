@@ -1,0 +1,46 @@
+.lemon-squeezy-updater-license-row td {
+    -webkit-box-shadow: 0px -1px 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0px -1px 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #ffb900;
+    background-color: #fff8e5;
+    display: table-cell !important
+}
+
+.lemon-squeezy-updater-license-row .spinner {
+    float: none;
+    vertical-align: top;
+}
+
+.lemon-squeezy-updater-license-row.active td {
+    border-left: 4px solid #72aee6;
+    background-color: #f7fcfe
+}
+
+.lemon-squeezy-updater-license-row.active td .spinner {
+    line-height: 16px;
+    margin-top: 0
+}
+
+.lemon-squeezy-updater-license-row.inactive td {
+    border-left: 4px solid #ffb900;
+    background-color: #fff8e5
+}
+
+.lemon-squeezy-updater-license-row.disabled td,
+.lemon-squeezy-updater-license-row.expired td {
+    border-left: 4px solid #dc3232;
+    background-color: #dc32321c
+}
+
+.input-error {
+    animation: flash-animation 0.5s;
+}
+
+@keyframes flash-animation {
+    0% {
+        border-color: red;
+    }
+    100% {
+        border-color: initial;
+    }
+}

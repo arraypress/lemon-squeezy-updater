@@ -1,0 +1,26 @@
+{
+  "name": "arraypress/lemon-squeezy-updater",
+  "description": "A WordPress plugin library for integrating Lemon Squeezy license management and updater capabilities, facilitating seamless activation, deactivation, and update checks for plugins.",
+  "homepage": "https://github.com/arraypress/lemon-squeezy-updater/",
+  "type": "library",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "David Sherlock",
+      "homepage": "https://arraypress.com/"
+    }
+  ],
+  "require": {
+    "php": "^7.4 || ^8.0",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "ArrayPress\\LemonSqueezy\\": "src/"
+    },
+    "files": [
+      "src/Functions.php"
+    ]
+  },
+  "minimum-stability": "stable"
+}
