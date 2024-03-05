@@ -64,6 +64,37 @@ if ( ! function_exists( 'plugin_version' ) ) {
 	}
 }
 
+if ( ! function_exists( 'plugin_author_url' ) ) {
+	/**
+	 * Retrieves the author URL of a given plugin.
+	 *
+	 * This function checks if the get_plugin_data function is available and includes it if not.
+	 * It then fetches the plugin data from the specified file path. If the author URL information
+	 * is available, it returns the author URL; otherwise, it returns null.
+	 *
+	 * @param string $plugin_file The full path to the plugin file from which to get the author URL.
+	 *
+	 * @return string|null The author URL of the plugin if available, or null if not.
+	 */
+	function plugin_author_url( string $plugin_file ): ?string {
+
+		// Check if the get_plugin_data function doesn't exist and include the plugin.php file if necessary
+		if ( ! function_exists( 'get_plugin_data' ) ) {
+			require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+		}
+
+		// Get the plugin data from the specified file
+		$plugin_data = get_plugin_data( $plugin_file );
+
+		// Check if the author URL information exists in the plugin data
+		if ( ! empty( $plugin_data ) && isset( $plugin_data['AuthorURI'] ) ) {
+			return trim( $plugin_data['AuthorURI'] );
+		}
+
+		return null;
+	}
+}
+
 if ( ! function_exists( 'suffix_str' ) ) {
 	/**
 	 * Generates a sanitized option name for the plugin based on the plugin slug.

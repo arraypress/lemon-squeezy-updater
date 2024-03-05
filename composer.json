@@ -19,7 +19,8 @@
       "ArrayPress\\LemonSqueezy\\": "src/"
     },
     "files": [
-      "src/Functions.php"
+      "src/Functions.php",
+      "src/Helper.php"
     ]
   },
   "minimum-stability": "stable"

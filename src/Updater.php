@@ -180,7 +180,7 @@ if ( ! class_exists( __NAMESPACE__ . '\\Updater' ) ) :
 			$this->product_id = absint( $product_id );
 			$this->variant_id = absint( $variant_id );
 
-			$this->renewal_url = trim( $renewal_url );
+			$this->renewal_url = ! empty( $renewal_url ) ? trim( $renewal_url ) : plugin_author_url( $file );
 
 			$this->license_name_key = suffix_str( $this->plugin_slug, 'license_key' );
 			$this->license_data_key = suffix_str( $this->plugin_slug, 'license_data' );
